@@ -1,0 +1,10 @@
+git clone https://github.com/badtuxx/giropops-senhas.git
+cd giropops-senhas/
+apt-get update
+apt-get install pip
+pip install --no-cache-dir -r requirements.txt
+apt-get install redis
+systemctl start redis
+systemctl status redis
+export REDIS_HOST=localhost
+flask run --host=0.0.0.0
